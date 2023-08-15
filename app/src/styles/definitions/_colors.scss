@@ -1,0 +1,42 @@
+///
+/// @author Miguel Bento
+/// @group Variables
+///
+/// With the current implementation
+/// it's possible to update colors through JavaScript.
+/// To do so, simply change the css property with the same name as the Sass variable.
+///
+/// To add more colors to this file:
+///   - Add a css property with the name of the color.
+///   - Create a Sass variable with the css property name.
+///
+/// RGB values are preferred over hex.
+///
+/// eg:
+/// ```
+/// --flashy-red: 187, 0, 0; <- notice the rgb is not wrapping the values here
+/// $flashy-red: rgb(var(--flashy-red));
+/// ```
+/// By using the rgb here the alpha can also be changed and used to create another color:
+/// ```
+/// $flashy-red-transparent: rgba(var(--flashy-red), .7);
+/// ```
+///
+$definitions: (
+  --white: (
+    255,
+    255,
+    255
+  ),
+  --black: (
+    0,
+    0,
+    0
+  )
+);
+
+:root {
+  @each $property, $value in $definitions {
+    #{$property}: #{$value};
+  }
+}

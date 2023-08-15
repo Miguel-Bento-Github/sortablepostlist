@@ -1,0 +1,65 @@
+@use "@/styles/mixins/rtl" as *;
+@use "@/styles/mixins/viewport" as *;
+
+.appear-enter-active {
+  animation: appear-mobile 1s ease;
+
+  @include tablet-landscape {
+    animation: appear 1s ease;
+
+    @include rtl {
+      animation: appear-rtl 1s ease;
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(5vw);
+  }
+
+  75% {
+    opacity: 0;
+    transform: translateX(5vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-rtl {
+  0% {
+    opacity: 0;
+    transform: translateX(-5vw);
+  }
+
+  75% {
+    opacity: 0;
+    transform: translateX(-5vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear-mobile {
+  0% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+
+  75% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

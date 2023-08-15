@@ -1,0 +1,41 @@
+@mixin min-width-media($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 380px) and (max-height: 600px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include min-width-media(380px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @include min-width-media(768px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @include min-width-media(1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @include min-width-media(1366px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include min-width-media(1920px) {
+    @content;
+  }
+}

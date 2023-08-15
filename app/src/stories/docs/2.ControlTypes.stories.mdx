@@ -1,0 +1,127 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Docs/Control Types" />
+
+# Control Types
+
+You can configure individual controls with the “control" annotation in the
+argTypes field of either a component or story.
+
+Here is the full list of available controls you can use:
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Data Type</th>
+      <th align="center">Control Type</th>
+      <th align="left">Description</th>
+      <th align="center">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        <strong>boolean</strong>
+      </td>
+      <td align="center">boolean</td>
+      <td align="left">checkbox input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left">
+        <strong>number</strong>
+      </td>
+      <td align="center">number</td>
+      <td align="left">a numeric text box input</td>
+      <td align="center">min, max, step</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">range</td>
+      <td align="left">a range slider input</td>
+      <td align="center">min, max, step</td>
+    </tr>
+    <tr>
+      <td align="left">
+        <strong>object</strong>
+      </td>
+      <td align="center">object</td>
+      <td align="left">json editor text input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left">
+        <strong>array</strong>
+      </td>
+      <td align="center">object</td>
+      <td align="left">json editor text input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">file</td>
+      <td align="left">a file input that gives you a array of urls</td>
+      <td align="center">accept</td>
+    </tr>
+    <tr>
+      <td align="left">
+        <strong>enum</strong>
+      </td>
+      <td align="center">radio</td>
+      <td align="left">radio buttons input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">inline-radio</td>
+      <td align="left">inline radio buttons input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">check</td>
+      <td align="left">multi-select checkbox input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">inline-check</td>
+      <td align="left">multi-select inline checkbox input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">select</td>
+      <td align="left">select dropdown input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">multi-select</td>
+      <td align="left">multi-select dropdown input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left">
+        <strong>string</strong>
+      </td>
+      <td align="center">text</td>
+      <td align="left">simple text input</td>
+      <td align="center">-</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">color</td>
+      <td align="left">
+        color picker input that assumes strings are color values
+      </td>
+      <td align="center">presetColors</td>
+    </tr>
+    <tr>
+      <td align="left"></td>
+      <td align="center">date</td>
+      <td align="left">date picker input</td>
+      <td align="center">-</td>
+    </tr>
+  </tbody>
+</table>

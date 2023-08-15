@@ -1,0 +1,16 @@
+@use "sass:list";
+@use "@/styles/functions/get" as *;
+@use "@/styles/definitions/font-maps" as *;
+
+/// Sets the CSS `font` shorthand property.
+/// Usage: `@include font(body);`
+@mixin font($key, $fontMap: $mobile) {
+  $style: get($fontMap, $key);
+  $len: length($style);
+
+  @if $len > 4 {
+    font: nth($style, 1) list.slash(nth($style, 2), nth($style, 3)) nth($style, 4) nth($style, 5);
+  } @else {
+    font: nth($style, 1) list.slash(nth($style, 2), nth($style, 3)) nth($style, 4);
+  }
+}

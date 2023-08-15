@@ -1,0 +1,36 @@
+@use "@/styles/mixins/viewport" as *;
+
+$start: grid-start;
+$end: grid-end;
+
+@mixin top-level {
+  display: grid;
+  grid-template-columns: [#{$start}] repeat(4, calc(25% - 0.75rem)) [#{$end}];
+  grid-auto-flow: row;
+  column-gap: 1rem;
+
+  @include tablet-portrait {
+    grid-template-columns: [#{$start}] repeat(8, calc(12.5% - 0.875rem)) [#{$end}];
+  }
+
+  @include desktop-small {
+    grid-template-columns: [#{$start}] repeat(12, calc(8.3334% - 0.9167rem)) [#{$end}];
+  }
+}
+
+@mixin span-all-columns {
+  grid-column: $start / $end;
+}
+
+@mixin span-half-columns {
+  grid-column-start: auto;
+  grid-column-end: span 2;
+
+  @include tablet-portrait {
+    grid-column-end: span 4;
+  }
+
+  @include desktop-small {
+    grid-column-end: span 6;
+  }
+}

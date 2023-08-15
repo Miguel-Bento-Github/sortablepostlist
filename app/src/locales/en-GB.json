@@ -1,0 +1,7 @@
+{
+  "home": {
+    "title": "Home",
+    "headline": "Sortable Post List",
+    "post": "Post {id}"
+  }
+}

@@ -1,0 +1,149 @@
+@use "@/styles/mixins/typography";
+@use "@/styles/mixins/viewport" as *;
+/// This file contains the default styles.
+/// They are opinionated and customized to the styling patterns in this project.
+/// Some originate from the [sanitize.css](https://github.com/csstools/sanitize.css) library.
+
+/**
+ * 1. Use the entire viewport.
+ * 2. Breaks words to prevent overflow.
+ * 3. Remove the grey highlight on links in iOS.
+ * 4. Prevent adjustments of font size after orientation changes in iOS.
+ */
+:where(html) {
+  position: relative;
+  height: 100%; /* 1 */
+  overflow-wrap: break-word; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3 */
+  text-size-adjust: 100%; /* 4 */
+  -webkit-text-size-adjust: 100%; /* 4 */
+  background-color: #f4f4f4;
+  color: #3b3b3b;
+  overflow: overlay;
+}
+
+/**
+ * Use the entire viewport.
+ */
+:where(body) {
+  height: 100%;
+}
+
+/**
+ * 1. Remove browser style border
+ * 2. Remove browser background color
+ * 3. Indicate clickability
+ */
+:where(button) {
+  border: 0; /* 1 */
+  background-color: transparent; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Remove the list style on lists that have an explicit role.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns
+ */
+:where(ul[role], ol[role]) {
+  list-style: none;
+  padding: 0;
+}
+
+/**
+ * Add the correct text decoration in Safari.
+ */
+:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * 1. Collapse border spacing.
+ * 2. Correct table border color in Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+:where(table) {
+  border-collapse: collapse; /* 1 */
+  border-color: currentColor; /* 2 */
+  text-indent: 0; /* 3 */
+}
+
+/**
+ * Remove the margin on controls in Safari and Firefox.
+ */
+:where(button, input, select, textarea) {
+  margin: 0;
+}
+
+/**
+ * Make the appearance consistent across browsers.
+ */
+:where(fieldset) {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Change the cursor on busy elements.
+ */
+:where([aria-busy="true"]) {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements.
+ */
+:where([aria-disabled="true"], [disabled]) {
+  cursor: not-allowed;
+}
+
+/**
+ * Remove thick dialog border.
+ */
+:where(dialog) {
+  border: 0;
+}
+
+/**
+ * Remove interactions when the dialog is closed.
+ */
+:where(dialog:not([open])) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/**
+ * 1. Remove animations when motion is reduced.
+ * 2. Remove fixed background attachments when motion is reduced.
+ * 3. Remove timed scrolling behaviors when motion is reduced.
+ * 4. Remove transitions when motion is reduced.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important; /* 1 */
+    animation-duration: 1ms !important; /* 1 */
+    animation-iteration-count: 1 !important; /* 1 */
+    background-attachment: initial !important; /* 2 */
+    scroll-behavior: auto !important; /* 3 */
+    transition-delay: 0s !important; /* 4 */
+    transition-duration: 0s !important; /* 4 */
+  }
+}
+
+/**
+ * Don't add margins to headings or paragraphs by default
+ */
+:where(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
+}
+
+/**
+ * Change the fill color to match the text color
+ */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}

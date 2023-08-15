@@ -1,0 +1,61 @@
+@use "@/styles/definitions/font-maps" as *;
+@use "@/styles/mixins/font" as *;
+@use "@/styles/mixins/viewport" as *;
+
+/// Sets font rules that are responsive to viewport width.
+/// Usage: `@include fluid-typography(body);`
+@mixin fluid-typography($key) {
+  @include font($key, $mobile);
+
+  @include tablet-portrait {
+    @include font($key, $tablet);
+  }
+
+  @include desktop-small {
+    @include font($key, $desktop);
+  }
+}
+
+@mixin header-1($margin: true) {
+  @include fluid-typography(header-1);
+
+  @if $margin {
+    margin-bottom: 0.25rem;
+  }
+
+  @include tablet-portrait {
+    @if $margin {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @include desktop-small {
+    @if margin {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@mixin header-2($margin: true) {
+  @include fluid-typography(header-2);
+
+  @if $margin {
+    margin-bottom: 0.25rem;
+  }
+
+  @include tablet-portrait {
+    @if $margin {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @include desktop-small {
+    @if $margin {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@mixin body {
+  @include fluid-typography(body);
+}

@@ -1,0 +1,13 @@
+/// Shorthand mixin for offset positioning
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+@mixin pseudo($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  content: "";
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

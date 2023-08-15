@@ -1,0 +1,10 @@
+/// Get map values from maps
+/// @param map: the target map
+/// @param key: the map key
+@function get($map, $key) {
+  @if map-has-key($map: $map, $key: $key) {
+    @return map-get($map: $map, $key: $key);
+  } @else {
+    @error "#{$key} key not found in map: #{$map}";
+  }
+}

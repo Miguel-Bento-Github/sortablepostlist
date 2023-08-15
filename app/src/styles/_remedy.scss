@@ -1,0 +1,78 @@
+/// This file is a remedy for the technical debt of CSS.
+/// It was based on the [CSS Remedy](https://github.com/jensimmons/cssremedy) project.
+
+/**
+ * Use border-box by default, globally.
+ */
+*, ::before, ::after { box-sizing: border-box; }
+
+/**
+ * Consistent line-spacing, even when inline elements have different line-heights.
+ * This is part of a working draft: https://www.w3.org/TR/css-inline-3/#line-fill
+ * The name of this property will change: https://github.com/w3c/csswg-drafts/issues/5189
+ */
+:where(html) { inline-sizing: normal; }
+
+/**
+ * Remove the tiny space around the edge of the page.
+ */ 
+:where(body) { margin: 0; }
+
+/**
+ * Maintain `hidden` behaviour when overriding `display` values.
+ */
+:where([hidden]) { display: none; }
+
+/**
+ * Make lines wrap instead of overflow.
+ */
+:where(pre) { white-space: pre-wrap; }
+
+/**
+ * 1. Solid, thin horizontal rules
+ * 2. Remove Firefox `color: gray`
+ * 3. Remove default `1px` height, and common `overflow: hidden`
+ */
+:where(hr) {
+  border-style: solid; /* 1 */
+  border-width: 1px 0 0; /* 1 */
+  color: inherit; /* 2 */
+  height: 0; /* 3 */
+  overflow: visible; /* 3 */
+}
+
+/**
+ * 1. Block display is usually what we want
+ * 2. Removes strange space-below if the display value is overwritten
+ * 3. Responsive by default
+ */
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+  max-width: 100%; /* 3 */
+}
+
+/**
+ * These new elements display inline by default,
+ * but that's not the expected behavior for either one.
+ * This can interfere with proper layout and aspect-ratio handling.
+ * 1. Remove the unnecessary wrapping `picture`, while maintaining contents
+ * 2. Source elements have nothing to display, so we hide them entirely
+*/
+:where(picture) { display: contents; } /* 1 */
+:where(source) { display: none; } /* 2 */
+
+/**
+ * Maintain intrinsic aspect ratios when `max-width` is applied.
+ * `iframe`, `embed`, and `object` are also embedded, but have no intrinsic ratio,
+ * so their `height` needs to be set explicitly.
+ */
+:where(img, svg, video, canvas) {
+  height: auto;
+}
+
+/**
+ * There is no good reason elements default to 300px and 
+ * audio files are unlikely to come with a width attribute.
+ */
+:where(audio) { width: 100%; }

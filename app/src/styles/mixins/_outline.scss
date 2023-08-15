@@ -1,0 +1,14 @@
+/// Adds the standard focus outline styling
+/// Usage: `.class:focus { @include outline.focus(); }`
+@mixin focus($offset: -3px, $width: 3px, $color: #3b3b33, $shade: 5) {
+  outline-width: $width;
+  outline-style: solid;
+  outline-color: #3b3b33;
+  outline-offset: $offset;
+
+  // TODO #1700 remove this once https://bugs.webkit.org/show_bug.cgi?id=246192 is CLOSED
+  @supports (-webkit-hyphens: none) {
+    outline: none;
+    border: $width solid $color;
+  }
+}

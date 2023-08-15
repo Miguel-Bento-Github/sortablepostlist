@@ -1,0 +1,11 @@
+/// Reset global styles to a reasonable starting point
+@use "@/styles/remedy";
+@use "@/styles/default";
+
+/// Define colors, fonts and baseline typography rules
+@use "@/styles/definitions/colors" as *;
+@use "@/styles/definitions/typography-root" as *;
+
+/// Define custom named Vue transitions and animations
+/// https://vuejs.org/guide/built-ins/transition.html#named-transitions
+@use "@/styles/transitions/fade" as *;
