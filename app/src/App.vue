@@ -1,26 +1,20 @@
 <script setup lang="ts">
-import NavigationLayout from "@/layouts/NavigationLayout.vue";
-import { useRoute } from "vue-router";
+import BaseLayout from "@/layouts/BaseLayout.vue";
 
-const route = useRoute();
+document.getElementById("loading")?.remove();
 </script>
 
 <template>
-  <transition name="route-transition" mode="out-in">
-    <component :is="route.meta.layoutComponent ?? NavigationLayout">
-      <router-view v-slot="{ Component }">
-        <transition name="route-transition" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </component>
-  </transition>
+  <BaseLayout>
+    <router-view />
+  </BaseLayout>
 </template>
 
 <style lang="scss">
 :where(#app) {
   min-height: max-content;
   height: 100%;
+  padding: 3rem;
 }
 </style>
 

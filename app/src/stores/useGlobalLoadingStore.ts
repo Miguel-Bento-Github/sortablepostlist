@@ -7,6 +7,6 @@ interface State {
 export const useGlobalLoadingStore = defineStore({
   id: "loading",
   state: (): State => ({
-    isLoading: false
+    isLoading: true
   })
 });

@@ -1,22 +1,27 @@
-import NavigationLayout from "@/layouts/NavigationLayout.vue";
 import HomeView from "@/views/HomeView.vue";
-import { StoryFn } from "@storybook/vue3";
+import type { Meta, StoryObj } from "@storybook/vue3";
 import { useQueryClient } from "@tanstack/vue-query";
+import { parameters } from "./config";
 
-const Template: StoryFn = (args) => ({
-  components: { HomeView, NavigationLayout },
-  setup() {
-    const queryClient = useQueryClient();
-    queryClient.clear();
+const meta: Meta<typeof HomeView> = {
+  title: "Design System/View",
+  component: HomeView,
+  parameters
+};
 
-    return { args };
-  },
-  template: `<NavigationLayout><HomeView /></NavigationLayout>`
-});
+export default meta;
+type Story = StoryObj<typeof HomeView>;
 
-export const Default: StoryFn = Template.bind({});
-
-export default {
-  title: "Design System/Pages/Home",
-  component: HomeView
+export const Home: Story = {
+  render: () => ({
+    components: { HomeView },
+    setup() {
+      /**
+       * Allows story to reload on story navigation
+       */
+      const queryClient = useQueryClient();
+      queryClient.clear();
+    },
+    template: `<HomeView v-bind="args" />`
+  })
 };

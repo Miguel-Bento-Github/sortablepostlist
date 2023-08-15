@@ -1,31 +1,10 @@
 @use "@/styles/definitions/shadow-maps" as *;
 
-@mixin inner {
-  box-shadow: map-get($shadows, inner);
-}
-
-@mixin static {
-  box-shadow: map-get($shadows, low);
-}
-
 @mixin low {
-  box-shadow: map-get($shadows, inner), map-get($shadows, low);
+  box-shadow: map-get($shadows, low-inner), map-get($shadows, low-outer);
 }
 
 @mixin low-pressed {
-  box-shadow: map-get($shadows, inner), map-get($shadows, low-pressed);
+  box-shadow: map-get($shadows, low-inner), map-get($shadows, low-pressed);
   transform: translateY(2px);
-}
-
-@mixin high {
-  box-shadow: map-get($shadows, inner), map-get($shadows, high);
-}
-
-@mixin high-pressed {
-  box-shadow: map-get($shadows, inner), map-get($shadows, high-pressed);
-  transform: translateY(2px);
-}
-
-@mixin warning {
-  box-shadow: map-get($shadows, inner), map-get($shadows, warning);
 }

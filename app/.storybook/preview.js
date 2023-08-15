@@ -18,6 +18,7 @@ setup((app) => {
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
+    default: "light",
     grid: {
       cellSize: 16,
       opacity: 0.2,

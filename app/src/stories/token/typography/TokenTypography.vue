@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 
-const props = defineProps<{ message: string; type: string }>();
+const props = defineProps<{ message: string; type: string; color: string }>();
 
 const classList = computed(() => ({
   [`typography-${props.type}`]: !!props.type
@@ -9,7 +9,7 @@ const classList = computed(() => ({
 </script>
 
 <template>
-  <div :class="classList">
+  <div :class="classList" :style="{ color: color }">
     {{ message }}
   </div>
 </template>

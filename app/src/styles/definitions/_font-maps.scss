@@ -1,19 +1,19 @@
 @use "@/styles/definitions/font-family" as family;
 
 $mobile: (
-  header-1: 700 1.938rem 2.5rem family.$font,
-  header-2: 700 1.563rem 2rem family.$font,
+  header-1: 500 1.25rem 2rem family.$font,
+  header-2: 500 1.125rem 2rem family.$font,
   body: 400 1rem 1.5rem family.$font
 );
 
 $tablet: (
-  header-1: 700 4rem 5.5rem family.$font,
-  header-2: 700 2.813rem 4rem family.$font,
+  header-1: 500 1.5rem 2rem family.$font,
+  header-2: 500 1.25rem 2rem family.$font,
   body: 400 1rem 1.5rem family.$font
 );
 
 $desktop: (
-  header-1: 700 5rem 6.5rem family.$font,
-  header-2: 700 3.563rem 5rem family.$font,
-  body: 400 1.25rem 2rem family.$font
+  header-1: 500 1.5rem 2rem family.$font,
+  header-2: 500 1.25rem 2rem family.$font,
+  body: 400 1rem 1.5rem family.$font
 );

@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use '@/styles/mixins/viewport' as *;
+@use "@/styles/mixins/viewport" as *;
 
 .layout {
   height: 100%;
@@ -16,10 +16,7 @@
 
   @include desktop-small {
     max-width: 63.5rem;
+    margin: auto;
   }
-}
-
-.main {
-  height: 100%;
 }
 </style>

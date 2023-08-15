@@ -112,6 +112,9 @@ devDependencies:
   prettier:
     specifier: 3.0.1
     version: 3.0.1
+  react:
+    specifier: ^18.2.0
+    version: 18.2.0
   sass:
     specifier: 1.64.2
     version: 1.64.2

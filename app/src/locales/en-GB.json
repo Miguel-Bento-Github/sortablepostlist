@@ -3,5 +3,13 @@
     "title": "Home",
     "headline": "Sortable Post List",
     "post": "Post {id}"
-  }
+  },
+  "actions": {
+    "title": "List of actions committed",
+    "moved": "Moved post {id} from Index {from} to Index {to}",
+    "timeTravel": "Time Travel",
+    "moveUp": "move up",
+    "moveDown": "move down"
+  },
+  "loading": "loading"
 }

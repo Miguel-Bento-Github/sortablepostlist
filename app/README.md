@@ -4,8 +4,7 @@
   - [How to use the app](#how-to-use-the-app)
     - [First time setup](#first-time-setup)
     - [Scripts](#scripts)
-  - [Commit messages](#commit-messages)
-          - [This guide only refers to files changed inside `app/` folder](#this-guide-only-refers-to-files-changed-inside-app-folder)
+  - [Commit messages](#commit-messages) - [This guide only refers to files changed inside `app/` folder](#this-guide-only-refers-to-files-changed-inside-app-folder)
     - [Prefix Table](#prefix-table)
     - [Usage example](#usage-example)
       - [With body message](#with-body-message)
@@ -21,7 +20,6 @@
     - [Code style conventions:](#code-style-conventions)
   - [Internationalization (i18n)](#internationalization-i18n)
   - [Integration Notes](#integration-notes)
-    - [Icons](#icons)
     - [Views](#views)
     - [Layouts](#layouts)
     - [VSCode Extensions](#vscode-extensions)
@@ -211,22 +209,6 @@ which is the standard for Vue apps. Users can change their language in the
 Read more about translations in [the locales README](./src/locales/README.md).
 
 ## Integration Notes
-
-### Icons
-
-The icon files are part of the app bundle, so if content from the API needs to
-use one of those icons, they will have to reference an identifier.
-
-Our icons are defined as `src/assets/svg/interface/Icon[name].vue` files. To reference one of those icons, the API will have to pass the **name** of the icon. For example:
-
-- `"book"` matches `IconBook.vue`
-- `"flame"` matches `IconFlame.vue`
-
-In addition, we also support _modifiers_ for specific icons. They can be added to the name of the icon with a dot (`.`) as a separator character. For example:
-
-- `"arrow.top"` gives you an arrow pointing upwards.
-
-All of this behavior is defined in the `src/util/getIconByName.ts` utility.
 
 ### Views
 
