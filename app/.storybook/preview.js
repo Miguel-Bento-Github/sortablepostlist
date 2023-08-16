@@ -5,12 +5,10 @@ import { router } from "@/router/router";
 import "@/styles/boot.scss";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { setup } from "@storybook/vue3";
-import { createPinia } from "pinia";
 
 setup((app) => {
   app
     .use(i18n)
-    .use(createPinia())
     .use(router)
     .use(...vueQueryPlugin);
 });

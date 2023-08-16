@@ -4,7 +4,7 @@ import { useQueryClient } from "@tanstack/vue-query";
 import { parameters } from "./config";
 
 const meta: Meta<typeof HomeView> = {
-  title: "Design System/View",
+  title: "Component/View",
   component: HomeView,
   parameters
 };

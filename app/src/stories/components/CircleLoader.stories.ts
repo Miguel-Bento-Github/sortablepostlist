@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import CircleLoader from "./CircleLoader.vue";
 
 const meta: Meta<typeof CircleLoader> = {
-  title: "Design System/Loader",
+  title: "Component/Loader",
   component: CircleLoader,
   parameters: { backgrounds: { disable: true } }
 };

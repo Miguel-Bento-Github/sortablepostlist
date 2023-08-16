@@ -2,6 +2,7 @@
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
+defineProps<{ backgroundColor?: string; color?: string }>();
 </script>
 
 <template>

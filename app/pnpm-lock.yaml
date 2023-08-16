@@ -14,9 +14,6 @@ dependencies:
   js-base64:
     specifier: 3.7.5
     version: 3.7.5
-  pinia:
-    specifier: 2.1.6
-    version: 2.1.6(typescript@5.1.6)(vue@3.3.4)
   unity-webgl:
     specifier: 3.5.1
     version: 3.5.1(vue@3.3.4)
@@ -124,9 +121,6 @@ devDependencies:
   storybook:
     specifier: 7.2.3
     version: 7.2.3
-  storybook-addon-mock:
-    specifier: 4.1.0
-    version: 4.1.0(@storybook/addons@7.3.0)(@storybook/blocks@7.3.0)(@storybook/components@7.3.0)(@storybook/manager-api@7.3.0)(@storybook/theming@7.3.0)(react-dom@18.2.0)(react@18.2.0)(storybook@7.2.3)
   typescript:
     specifier: 5.1.6
     version: 5.1.6
@@ -2999,19 +2993,6 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
-    dev: true
-
-  /@storybook/addons@7.3.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-dgS0/ObLzhTmTRemTXKYQqLufuh6r+E20YuPgMVI5/iZFiTnGfEwPhWmoud42DQV8BL8pa1gloWPcJnJ/KUvKw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/manager-api': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.3.0
-      '@storybook/types': 7.3.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@storybook/blocks@7.2.3(react-dom@18.2.0)(react@18.2.0):
@@ -7847,11 +7828,6 @@ packages:
       ufo: 1.2.0
     dev: true
 
-  /mock-xmlhttprequest@8.2.0:
-    resolution: {integrity: sha512-agEokniRxw/MhrmIl9Ytn5wuj6kK+pu4KaGPV2fGEKStHXH9HIzYPChth2Jb/MB3TMX0ER1F1QMsvMA3BBe3qA==}
-    engines: {node: '>=14.0.0'}
-    dev: true
-
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -8240,10 +8216,6 @@ packages:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
     dev: true
 
-  /path-to-regexp@6.2.1:
-    resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
-    dev: true
-
   /path-type@3.0.0:
     resolution: {integrity: sha512-T2ZUsdZFHgA3u4e5PfPbjd7HDDpxPnQb5jN0SrDsjNSuVXHJqtwTnWqG0B1jZrgmJ/7lj1EmVIByWt1gxGkWvg==}
     engines: {node: '>=4'}
@@ -8314,24 +8286,6 @@ packages:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
     dev: true
-
-  /pinia@2.1.6(typescript@5.1.6)(vue@3.3.4):
-    resolution: {integrity: sha512-bIU6QuE5qZviMmct5XwCesXelb5VavdOWKWaB17ggk++NUwQWWbP5YnsONTk3b752QkW9sACiR81rorpeOMSvQ==}
-    peerDependencies:
-      '@vue/composition-api': ^1.4.0
-      typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.3.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/devtools-api': 6.5.0
-      typescript: 5.1.6
-      vue: 3.3.4
-      vue-demi: 0.14.5(vue@3.3.4)
-    dev: false
 
   /pirates@4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
@@ -9344,36 +9298,6 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-addon-mock@4.1.0(@storybook/addons@7.3.0)(@storybook/blocks@7.3.0)(@storybook/components@7.3.0)(@storybook/manager-api@7.3.0)(@storybook/theming@7.3.0)(react-dom@18.2.0)(react@18.2.0)(storybook@7.2.3):
-    resolution: {integrity: sha512-2d644FyHsX5MUKegqi1WYidlUrO6aetbnw6DWv1ZkzGN0pTQYsNpGS2F7yIq+aU1/QDwhlIwWRfngylcylYm/Q==}
-    peerDependencies:
-      '@storybook/addons': ^7.0.0
-      '@storybook/blocks': ^7.0.0
-      '@storybook/components': ^7.0.2
-      '@storybook/manager-api': ^7.0.0
-      '@storybook/theming': ^7.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-      storybook: ^7.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/addons': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/blocks': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/components': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/manager-api': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/theming': 7.3.0(react-dom@18.2.0)(react@18.2.0)
-      mock-xmlhttprequest: 8.2.0
-      path-to-regexp: 6.2.1
-      polished: 4.2.2
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      storybook: 7.2.3
-    dev: true
-
   /storybook@7.2.3:
     resolution: {integrity: sha512-3tJHa3yUxhchO96I74WUxZIfPu1DZcG7VQByX6tuKqQ3YP6iZv90JPGseBwnTW+/0y/RaM7swf3RMon6Oe/zhA==}
     hasBin: true
@@ -9832,6 +9756,7 @@ packages:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: true
 
   /ufo@1.2.0:
     resolution: {integrity: sha512-RsPyTbqORDNDxqAdQPQBpgqhWle1VcTSou/FraClYlHf6TZnQcGslpLcAphNR+sQW4q5lLWLbOsRlh9j24baQg==}

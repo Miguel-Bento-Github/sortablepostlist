@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import TokenTypography from "./TokenTypography.vue";
 
 const meta: Meta<typeof TokenTypography> = {
-  title: "Design System/Typography",
+  title: "Component/Typography",
   component: TokenTypography,
   tags: ["autodocs"]
 };

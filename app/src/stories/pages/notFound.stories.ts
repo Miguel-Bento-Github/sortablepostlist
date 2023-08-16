@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import { parameters } from "./config";
 
 const meta: Meta<typeof NotFoundView> = {
-  title: "Design System/View",
+  title: "Component/View",
   component: NotFoundView,
   parameters
 };

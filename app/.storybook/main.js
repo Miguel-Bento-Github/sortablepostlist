@@ -35,8 +35,7 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-a11y",
-    "storybook-addon-mock"
+    "@storybook/addon-a11y"
   ],
   framework: {
     name: "@storybook/vue3-vite",
