@@ -1,3 +1,8 @@
+/* eslint-disable */
+/**
+ * Cypress types are currently conflicting with Vitest
+ * Relevant discussion at https://stackoverflow.com/questions/58999086/cypress-causing-type-errors-in-jest-assertions
+ */
 import { swapItemsInArray } from "../swapItemsInArray"; // Replace with the actual path to your module
 
 describe("swapItemsInArray", () => {

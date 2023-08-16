@@ -4,7 +4,7 @@
   - [How to use the app](#how-to-use-the-app)
     - [First time setup](#first-time-setup)
     - [Scripts](#scripts)
-  - [Commit messages](#commit-messages) - [This guide only refers to files changed inside `app/` folder](#this-guide-only-refers-to-files-changed-inside-app-folder)
+  - [Commit messages](#commit-messages)
     - [Prefix Table](#prefix-table)
     - [Usage example](#usage-example)
       - [With body message](#with-body-message)
@@ -59,9 +59,7 @@ The first word of the title should be lowercased, and no punctuation at the end 
 A commit body can be used when history is needed and/or complex logic that needs explanation.
 
 All commit messages should have a prefix type that include (app) for easier history search and
-separation between the APP and others.
-
-###### This guide only refers to files changed inside `app/` folder
+separation between the App and different projects(future proof).
 
 ### Prefix Table
 
@@ -97,12 +95,16 @@ feat(app): add BentoBox stories
 #### Incorrect usage example
 
 ```
-feat(app): Add BentoBox stories // Please notice the capitalization of the first word
+feat(app): Add BentoBox stories
 ```
 
+Please notice the capitalization of the first word
+
 ```
-feat(app): add BentoBox stories. // Please notice the dot at the end of the sentence
+feat(app): add BentoBox stories.
 ```
+
+Please notice the dot at the end of the sentence
 
 ## Storybook
 
@@ -139,34 +141,21 @@ Their documentation does a great job at explaining these two types of testing in
 
 ### Writing tests
 
-To help simplify writing tests, we have a handful of custom commands.
-
-For **both** testing types:
+To help simplify writing tests a custom command is introduced.
 
 - `cy.dataCy("")` helps to select elements by their `data-cy=""` attribute.
   Using attribute values to select elements prevents selectors from becoming
   outdated by a change in the template or styles. You can read more in their
   [Best Practices](https://docs.cypress.io/guides/references/best-practices#Selecting-Elements).
 
-Just for **component** testing:
-
-- `cy.mount(Component, options)` can mount a Vue component in any way you want
-  to. Under the hood, they use Vue Test Utils, which is why you can find the
-  documentation for the mounting options
-  [here in their documentation](https://v1.test-utils.vuejs.org/api/options.html).
-- `cy.vueWrapper()` lets you access the
-  [Vue Test Utils Wrapper](https://v1.test-utils.vuejs.org/api/wrapper/) if you
-  mounted a component with `cy.mount`. Usually, the next command is
-  `.should(({ wrapper }) => {})` to take advantage of Cypress's retryability.
-
 ## File System
 
 ### Naming conventions:
 
-Components should be named with PascalCase. <br>
+Components are named with PascalCase. <br>
 `MyComponent.vue`
 
-Sass files should be named with kebab-case prefixed with an \_underscore. <br>
+Sass files are named with kebab-case prefixed with an \_underscore. <br>
 `_sass.scss` <br>
 The main purpose of using partials is to break down CSS code into several pieces
 which are easier to maintain.
@@ -203,10 +192,7 @@ of choice to support ESLint.
 ## Internationalization (i18n)
 
 The app supports multiple languages through internationalization with `vue-i18n`
-which is the standard for Vue apps. Users can change their language in the
-[`PreferencesView`](./src/views/PreferencesView.vue).
-
-Read more about translations in [the locales README](./src/locales/README.md).
+which is the standard for Vue apps.
 
 ## Integration Notes
 

@@ -37,3 +37,5 @@ $CI_PROJECT_DIR
 
 # Lint
 .eslintcache
+# Local Netlify folder
+.netlify
