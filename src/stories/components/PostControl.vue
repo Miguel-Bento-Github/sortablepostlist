@@ -18,14 +18,17 @@ defineProps<{ isReversed?: boolean }>();
 
 <style lang="scss" scoped>
 @use "@/styles/mixins/size" as *;
+@use "@/styles/mixins/viewport" as *;
 
 .control {
   transition: transform 0.1s ease-in-out;
 
   &:hover {
-    transform: scale(1.4);
-    transition: transform 0.2s ease-in-out;
-    filter: drop-shadow(0 0 0.025rem currentColor);
+    @media (pointer: fine) {
+      transform: scale(1.4);
+      transition: transform 0.2s ease-in-out;
+      filter: drop-shadow(0 0 0.025rem currentColor);
+    }
   }
 }
 

@@ -12,17 +12,12 @@
  */
 :where(html) {
   position: relative;
+  min-height: max-content;
   height: 100%; /* 1 */
   overflow-wrap: break-word; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3 */
   text-size-adjust: 100%; /* 4 */
   -webkit-text-size-adjust: 100%; /* 4 */
-  background: linear-gradient(
-    170deg,
-    rgb(var(--primary)) 15rem,
-    rgb(var(--light-grey)) calc(15rem + 1px) /* Fix jagged line */
-  );
-  background-size: cover;
   color: rgb(var(--dark-grey));
   overflow: overlay;
 }
@@ -31,8 +26,15 @@
  * Use the entire viewport.
  */
 :where(body) {
-  @include typography.body;
+  min-height: max-content;
   height: 100%;
+  background: linear-gradient(
+      170deg,
+      rgb(var(--primary)) 15rem,
+      rgb(var(--light-grey)) calc(15rem + 1px) /* Fix jagged line */
+    )
+    no-repeat;
+  @include typography.body;
 }
 
 /**
