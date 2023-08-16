@@ -17,7 +17,11 @@
     "jsx": "preserve",
     "sourceMap": true,
     "baseUrl": "./",
-    "types": ["vite/client", "@vue/test-utils", "@intlify/unplugin-vue-i18n/messages"],
+    "types": [
+      "vite/client",
+      "@vue/test-utils",
+      "@intlify/unplugin-vue-i18n/messages"
+    ],
     "paths": {
       "@/*": ["src/*"],
       "@cy/*": ["cypress/*"]
@@ -30,5 +34,6 @@
     "src/**/*",
     "src/**/*.vue",
     "./cypress.d.ts"
-  ]
+  ],
+  "exclude": ["./cypress.config.ts"]
 }
