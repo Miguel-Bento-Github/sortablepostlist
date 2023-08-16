@@ -68,13 +68,18 @@ const handleTimeTravel = (index: number, newPostState: PostsResponse[]) => {
     <section>
       <h1 class="headline">{{ t("home.headline") }}</h1>
       <TransitionGroup name="fade">
-        <CircleLoader aria-live="polite" v-if="isLoadingPosts" />
+        <CircleLoader
+          aria-live="polite"
+          v-if="isLoadingPosts"
+          data-cy="loader"
+        />
         <TransitionGroup
           aria-live="polite"
           class="posts"
           name="list"
           tag="ul"
           role="list"
+          data-cy="posts"
           v-else
         >
           <MainCard
@@ -83,16 +88,20 @@ const handleTimeTravel = (index: number, newPostState: PostsResponse[]) => {
             v-for="(post, index) in posts"
             :key="post.id"
           >
-            <span class="post-id">{{ t("home.post", { id: post.id }) }}</span>
+            <span class="post-id" data-cy="post-id">{{
+              t("home.post", { id: post.id })
+            }}</span>
             <div class="controls">
               <PostControl
                 @click="swapPostPosition(post.id, index, true)"
                 :is-reversed="!!index"
                 v-if="index"
+                data-cy="control-up"
               />
               <PostControl
                 @click="swapPostPosition(post.id, index, false)"
                 v-if="postsData && postsData.length - 1 !== index"
+                data-cy="control-down"
               />
             </div>
           </MainCard>
@@ -119,7 +128,10 @@ const handleTimeTravel = (index: number, newPostState: PostsResponse[]) => {
           :class="{ 'card--list': postHistory.length > 1 }"
         >
           <span>{{ post.move }}</span>
-          <TimeTravel @click="handleTimeTravel(index, post.currentPostState)" />
+          <TimeTravel
+            @click="handleTimeTravel(index, post.currentPostState)"
+            data-cy="time-travel"
+          />
         </MainCard>
       </TransitionGroup>
     </section>

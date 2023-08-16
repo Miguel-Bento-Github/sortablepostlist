@@ -14,6 +14,7 @@ import MainCard from "@/stories/components/MainCard.vue";
     <RouterLink
       class="cta cta--primary"
       :to="{ name: GlobalNavigationRoute.Home }"
+      data-cy="rescue"
       >Rescue Me!</RouterLink
     >
   </MainCard>
